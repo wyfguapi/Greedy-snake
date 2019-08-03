@@ -1,0 +1,71 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ body{
+	background: #222;
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	font-size: 30px;
+	align-items: center;
+	color: #fff;		
+	padding: 0 20px;
+}
+
+.header>.btn{
+	width: 200px;
+	height: 50px;
+	border: none;
+	font-size: 30px;
+	background: greenyellow;
+	color: #FFFFFF;
+}
+
+.content{
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	box-sizing: content-box;
+	width: 900px;
+	margin: 0 auto;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.contItem{
+	border-left: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	background: #333;
+}
+.snake{
+	background: #fff;
+	border-left: 1px solid rgba(0,0,0,0.4);
+	border-top: 1px solid rgba(0,0,0,0.4);
+}
+ .food:before{
+	width: 100%;
+	height: 100%;
+	content: "";
+	display: block;
+	background: yellow;
+	border-radius: 0.05rem;
+	animation:  wyf 1s alternate infinite;
+	box-shadow: 0 0 10px #ffffcc;
+}
+.food[data-food=redstar]:before{
+	background: pink;
+}
+@keyframes wyf{
+	from{
+		transform:scale(1)  rotate(0deg);
+	}
+	to{
+		transform: scale(0.5) rotate(360deg);
+	}
+}
+
