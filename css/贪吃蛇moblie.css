@@ -1,0 +1,110 @@
+.mobile body{
+	background: #222;
+}
+.mobile .header{
+	width: 7.5rem;
+	height: 100vh;
+	display: flex;
+	font-size: 0.3rem;
+	justify-content: space-between;
+	padding: 0.3rem;
+	color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #222;
+	z-index: 10;
+}
+.mobile .header>h1{
+	position: fixed;
+	left: 0.1rem;
+	top: 0.1rem;
+}
+.mobile .header>input{
+	width: 2.5rem;
+	height: 1rem;
+	border-radius:0.1rem ;
+	text-align: center;
+	background: greenyellow;
+	position: fixed;
+	right: 0.1rem;
+	font-size: 0.5rem;
+	top: 0.1rem;
+}
+
+.mobile .header>button{
+	width: 3rem;
+	height: 1rem;
+	text-align: center;
+	background: greenyellow;
+	position: fixed;
+	left: calc(50% - 1rem);
+	top: calc(50% - 0.25rem);
+}
+
+.mobile .content{
+	border-right: 0.01rem solid rgba(255,255,255,0.2);
+	border-bottom: 0.01rem solid rgba(255,255,255,0.2);
+	box-sizing: content-box;
+	width: 7rem;
+	margin: 0 auto;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: fixed;
+	left: calc(50% - 3.5rem);
+	top: 100%;
+	z-index: 100;
+}
+
+
+.mobile .contItem{
+	border-left: 0.01rem solid rgba(255,255,255,0.2);
+	border-bottom: 0.01rem solid rgba(255,255,255,0.2);
+	background: #333;
+}
+.mobile .snake{
+	animation: snake 0.4s;
+	background: #ccc;
+	border-left: 0.01rem solid rgba(0,0,0,0.4);
+	border-top: 0.01rem solid rgba(0,0,0,0.4);
+}
+@keyframes snake{
+	from{
+		background: #fff;
+		box-shadow:  0 0 0.15rem rgba(255,255,255,1);
+	}
+	to{
+		background: #ccc;
+		box-shadow:  0 0 0.15rem rgba(255,255,255,0.5);
+	}
+}
+
+
+
+.mobile .food:before{
+	width: 100%;
+	height: 100%;
+	content: "";
+	display: block;
+	background: yellow;
+	border-radius: 0.05rem;
+	animation:  wyf 1s alternate infinite;
+	box-shadow: 0 0 0.1rem #ffffcc;
+}
+.mobile .food[data-food=redstar]:before{
+	background: pink;
+}
+@keyframes wyf{
+	from{
+		transform:scale(1)  rotate(0deg);
+	}
+	to{
+		transform: scale(0.5) rotate(360deg);
+	}
+}
+
+
+
+
+
